@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <div id="container"></div>
+    <button id="add-para">Add new para</button>
+    <ul id="list">Your items will show up here</ul>
+    <button id="add-item">Add list item</button>
+</body>
+<script>
+    const btn1 = document.getElementById("add-para")
+    const btn2 = document.getElementById("add-item")
+    const list = document.getElementById("list")
+    const container = document.getElementById("container")
+    
+    btn2.addEventListener("click", () => {
+        const content = prompt("Enter item name: ")
+        const item = document.createElement("li")
+        item.innerText = content
+        list.appendChild(item)
+    })
+    
+    btn1.addEventListener("click", () => {
+        const content = prompt("Enter paragraph content: ")
+        const para1 = document.createElement("p")
+        para1.style.color = "red"
+        para1.style.backgroundColor = "yellow"
+        para1.innerText = content
+        container.appendChild(para1)
+    })
+</script>
+</html>
