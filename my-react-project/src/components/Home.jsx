@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import { Link, Outlet } from "react-router-dom"
 import "../App.css" 
+import Footer from './Footer'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
             </ul>
         </nav>
         <Outlet />
+        <Footer />
     </div>
   )
 }
